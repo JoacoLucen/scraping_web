@@ -1,4 +1,3 @@
-import csv
 import requests
 from bs4 import BeautifulSoup
 from data_base import save_titles
@@ -53,7 +52,7 @@ def extract_news_titles(html):
 links = {
     'TN': 'https://tn.com.ar/',
     'C5N': 'https://www.c5n.com/',
-    'LN': 'https://www.lanacion.com.ar/',
+    'LN': 'https://www.lanacion.com.ar/', 
     'Clarin': 'https://www.clarin.com/'
 }
 

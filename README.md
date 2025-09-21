@@ -9,7 +9,8 @@
 
 --------------------------------------------------------------------
 ## 🌟 About the Project
-"A program designed to scrape news channels in Argentina to obtain headlines and perform data analysis."
+"A program to scrape news channels in Argentina, and obtain titles and store them in SQLite.
+Then with this data, clean it and perform an analysis of it using the Streamlit library. Additionally, I added functionality to generate an automatic PDF file with the analysis performed"
 
 --------------------------------------------------------------------
 ## 🌳 Requirements
@@ -17,6 +18,7 @@
 - **Python 3**
 - **Code Editor**
 - **Terminal/Console**
+- **Google Browser**
 
 --------------------------------------------------------------------
 ## 🛠️ Installation
@@ -49,7 +51,12 @@ Follow these steps to set up the development environment:
 
 4. **Run the Program from the Terminal**: 
 
-    python scraping.py
+    cd src
+
+    python scraping.py (If you want to do a scrapping)
+
+    streamlit run app.py (If you want to view the Streamlit page and generate the PDF file, with the current data)
+
 
 --------------------------------------------------------------------
 
@@ -61,16 +68,27 @@ Follow these steps to set up the development environment:
 ## 🌳 Project Structure
 
 **What is the structure?**
+- The src folder contains the files necessary for the program's functionality.
+- The resource folder contains the folders necessary to store the images and the PDF file for analysis.
 - The scraping.py file contains the functions that will perform the scraping of news channels and get the headlines.
 - The data_base.py file contains the functions that move the scraped data to the database. It also contains the queries for the database.
+- The clear_stats.py file contains all the functions to get the data from the database
+- The app.py file contains the main structure for displaying the data
 
 **Tree**
 
 ```bash
 scraping_web/
-├── data_base.py
-│
-├── scraping.py
+├── resource/
+│   ├── img/
+│   └── pdf/
+├── src/
+│   ├── app.py
+│   ├── clear_stats.py
+│   ├── noticias.db
+│   ├── pdf_create.py
+│   ├── scraping.py
+│   └── data_base.py
 │ 
 ├── requirements.txt      
 │ 
